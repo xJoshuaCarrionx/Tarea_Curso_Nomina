@@ -28,115 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            txtusuario = new TextBox();
-            txtcontra = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            checkBox1 = new CheckBox();
-            progressBar1 = new ProgressBar();
-            SuspendLayout();
+            this.btnInicioSesion = new System.Windows.Forms.Button();
+            this.txtusuario = new System.Windows.Forms.TextBox();
+            this.txtcontra = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.SuspendLayout();
             // 
-            // button1
+            // btnInicioSesion
             // 
-            button1.Location = new Point(90, 261);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 22);
-            button1.TabIndex = 0;
-            button1.Text = "Iniciar sesion";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.btnInicioSesion.Location = new System.Drawing.Point(90, 261);
+            this.btnInicioSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInicioSesion.Name = "btnInicioSesion";
+            this.btnInicioSesion.Size = new System.Drawing.Size(130, 22);
+            this.btnInicioSesion.TabIndex = 0;
+            this.btnInicioSesion.Text = "Iniciar sesion";
+            this.btnInicioSesion.UseVisualStyleBackColor = true;
+            this.btnInicioSesion.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtusuario
             // 
-            txtusuario.Location = new Point(105, 112);
-            txtusuario.Margin = new Padding(3, 2, 3, 2);
-            txtusuario.Name = "txtusuario";
-            txtusuario.Size = new Size(110, 23);
-            txtusuario.TabIndex = 1;
+            this.txtusuario.Location = new System.Drawing.Point(105, 112);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(110, 23);
+            this.txtusuario.TabIndex = 1;
             // 
             // txtcontra
             // 
-            txtcontra.Location = new Point(105, 173);
-            txtcontra.Margin = new Padding(3, 2, 3, 2);
-            txtcontra.Name = "txtcontra";
-            txtcontra.PasswordChar = '*';
-            txtcontra.Size = new Size(110, 23);
-            txtcontra.TabIndex = 2;
+            this.txtcontra.Location = new System.Drawing.Point(105, 173);
+            this.txtcontra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcontra.Name = "txtcontra";
+            this.txtcontra.PasswordChar = '*';
+            this.txtcontra.Size = new System.Drawing.Size(110, 23);
+            this.txtcontra.TabIndex = 2;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(90, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(112, 25);
-            label1.TabIndex = 3;
-            label1.Text = "Bienvenido";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(90, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Bienvenido";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(42, 118);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Usuario:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(42, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Usuario:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(10, 178);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Contraseña:";
-            label3.Click += label3_Click;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 178);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 15);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Contraseña:";
             // 
             // checkBox1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(106, 198);
-            checkBox1.Margin = new Padding(3, 2, 3, 2);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(130, 19);
-            checkBox1.TabIndex = 6;
-            checkBox1.Text = "Mostrar Contraseña";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(106, 198);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(130, 19);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Mostrar Contraseña";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(262, 173);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(100, 23);
-            progressBar1.TabIndex = 7;
+            this.progressBar1.Location = new System.Drawing.Point(262, 173);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 7;
             // 
             // Loguin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(387, 338);
-            Controls.Add(progressBar1);
-            Controls.Add(checkBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(txtcontra);
-            Controls.Add(txtusuario);
-            Controls.Add(button1);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "Loguin";
-            Text = "Loguin";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(387, 338);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtcontra);
+            this.Controls.Add(this.txtusuario);
+            this.Controls.Add(this.btnInicioSesion);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Loguin";
+            this.Text = "Loguin";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Button button1;
+        private Button btnInicioSesion;
         private TextBox txtusuario;
         private TextBox txtcontra;
         private Label label1;

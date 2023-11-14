@@ -26,12 +26,25 @@ namespace Tarea_Curso_Nomina
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void StartLoginProcess()
         {
+            int totalSteps = 100;
+            int currentStep = 0;
 
+            while (currentStep <= totalSteps)
+            {
+                progressBar1.Value = currentStep;
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(30);
+
+                currentStep++;
+            }
+
+            progressBar1.Value = 0;
+            progressBar1.Visible = false;
+            btnInicioSesion.Enabled = true;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             string IngresarUsuaruio = txtusuario.Text;
             string IngresarContraseña = txtcontra.Text;
@@ -42,7 +55,7 @@ namespace Tarea_Curso_Nomina
 
             }
 
-            if (IngresarUsuaruio == CorrectUserName1  && IngresarContraseña == CorrectPassword1)
+            if (IngresarUsuaruio == CorrectUserName1 && IngresarContraseña == CorrectPassword1)
             {
                 MessageBox.Show("!Inicio de sesiòn Exitoso");
                 MessageBox.Show("Bienvenido al programa de Nomina Empleado,usuario.");
@@ -56,7 +69,8 @@ namespace Tarea_Curso_Nomina
 
 
 
-            }else if (IngresarUsuaruio == CorrectUserName2 && IngresarContraseña == CorrectPassword2)
+            }
+            else if (IngresarUsuaruio == CorrectUserName2 && IngresarContraseña == CorrectPassword2)
             {
                 MessageBox.Show("!Inicio de sesiòn Exitoso");
                 MessageBox.Show("Bienvenido al programa de Nomina Empleado,usuario.");
@@ -87,32 +101,9 @@ namespace Tarea_Curso_Nomina
             }
         }
 
-        private void StartLoginProcess()
-        {
-            int totalSteps = 100;
-            int currentStep = 0;
-
-            while (currentStep <= totalSteps)
-            {
-                progressBar1.Value = currentStep;
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(30);
-
-                currentStep++;
-            }
-
-            progressBar1.Value = 0;
-            progressBar1.Visible = false;
-            button1.Enabled = true;
-        }
-
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             txtcontra.PasswordChar = checkBox1.Checked ? '\0' : '*';
-
         }
-
-
     }
 }
