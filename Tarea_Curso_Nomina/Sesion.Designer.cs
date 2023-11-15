@@ -129,6 +129,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = SystemColors.ButtonFace;
+            label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(122, 26);
             label1.Name = "label1";
