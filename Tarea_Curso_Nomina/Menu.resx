@@ -160,6 +160,30 @@
         /vzFZzixLhtXFzi5/gQkoBmEFVn2si0oaScNAKEbBgcsjm4X31nGBJh4JYhYblbkAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAYAAABU1PscAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAHB8AABwfAWD9BNoAAAQsSURBVFhHzZe9axRRFMVHCLEJ
+        WIgfaSxtRLDRQnY2wahgIVgkhc5M0EI7/wILRVC0sBOCAUsJ2CZiJbHQMoXo7CKiIILY+YkEUdZz3rw3
+        uTM5O5tg1BQ/5u1975577uzs2zdRr9drJooayVvTUWcsjboT01G3nUZ5OzvSbaWXO3E234nT9wXZfN5O
+        r7g5rOFa5jBXaVZQngwyWEGJGkwD22HuPgz3muAart1sDRzrtNIPxugPsIS7fodw7GPFPNciZ7M0sAem
+        Ppfm2tnd10entmGMx6mAYxfDXLkOOcxVmhWUJ4MMVlCiK2zpxukjb+hnt5WdhEmadaZrDUScc2uwljnM
+        pUZNs4ryZJBBSzdOmjhPI452egPmnMkBDeCa3gh51KhpVlCeLDJowQ7SBHcaGnnz6sTFrSAi/RoI81zL
+        nCKXGlLboTxZZNDC4g1wm6SJWWNuLQ0gls0WuU4j6K1CebLIoEWJekZB8Ri0sgt8NOqEBtQcuBDyvZaq
+        IT1ZZNDyYizpx0EUCAZOhYLrgDkun1o17RLlySKDlnz8bD92BwO4y/iXXXlkwl3HnIPj+jy4UuZDq6Zd
+        ojxZZLCC2toKtqD4J2/iQR6fcc92l39s3EFqDRSxabeGa5njcz9Rq6a9gvJkkMEKStQDUzPexE+YOrSO
+        Bg4xp8hNZpR2ifJkkEFLfvhMEwdg4ldhJM1hbusaGuAWmvucX9SoaVZQniwyaFGiFeLkujdDnsLk3oYG
+        MJc+9Wt7zJWaBuXJIoOWxfHxQQzhSPAwmALfYfYmTPPIwO1xtBgnN4u5Yh1zmFvTWoXyZJFBS75vquT5
+        xGmc+ZPoVXzOieNIED07nHE8lLeye8HcILiWOcylBrWoSW3WsDWVJ4sMWqxYnwZ24m5eg7GPdaMNfGQO
+        c/9nA0P+UFY+Fp7lPE6f4DqH6y3ix4wt+zWB79Sg1r9uYAeKL9bMLOBHOZmPT43ArPvx8loZu7lkkmt9
+        TmCRmv+qgf0o+NYUX+rG2Riu3JFosmrajt1c4j77HL6pBZ231P7bDezCs/uuLIo3LMSHYcabXFcD1Bym
+        htMC1GYNW1N5ssigxYgNo0i5h3daySW+oHDuDxpwLzlOK+iiBmv5mtKTRQYt/EoJhK+WRXjXWjCycQ3w
+        at+Xr4a6ypNFBi1eaBdEv3nxJXuH/rQBA7/h8Jv4xpob0gDFcYdue2E8p9lYrfBGNcAYf9jFt4CajClP
+        Fhm0QIR35osXXuhTeKMa4FzYYr8gNqw8WWTQgq3tuBfk4WvSmWxiDQ0MgP8TxbeN2sqTRQYt5vFZhoER
+        Z2IQ1rQdq7WrGWEtVxO1lSeLDFog9JhiMPBEFNNY03as1iqKYwdv2mPlySKDFoi89GJzwJlZK7aBdcJa
+        rPlSebLIoAUiXykGIzyYlab+MjwAsoGvytMKveg3cMdaUkrbNAcAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="BtnNomina.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAYAAABU1PscAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -317,6 +341,6 @@
     <value>128, 18</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>27</value>
+    <value>25</value>
   </metadata>
 </root>

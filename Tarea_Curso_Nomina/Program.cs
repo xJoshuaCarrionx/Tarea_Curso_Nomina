@@ -11,7 +11,7 @@ namespace Tarea_Curso_Nomina
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Loguin());
+            Application.Run(new Menu());
         }
     }
 }

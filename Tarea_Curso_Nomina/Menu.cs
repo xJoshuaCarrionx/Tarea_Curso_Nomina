@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Clases_Nomina;
 
+
 namespace Tarea_Curso_Nomina
 {
     public partial class Menu : Form
@@ -22,15 +23,23 @@ namespace Tarea_Curso_Nomina
         public Menu()
         {
             InitializeComponent();
+
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult r = MessageBox.Show("¿Desea salir?",
+               "Inicio de sesion", MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void BtnMaximizar_Click(object sender, EventArgs e)
         {
+
             this.WindowState = FormWindowState.Maximized;
             BtnMaximizar.Visible = false;
             BtnRestaurar.Visible = true;
@@ -45,6 +54,7 @@ namespace Tarea_Curso_Nomina
 
         private void BtnRestaurar_Click(object sender, EventArgs e)
         {
+
             this.WindowState = FormWindowState.Normal;
             BtnRestaurar.Visible = false;
             BtnMaximizar.Visible = true;
@@ -77,6 +87,7 @@ namespace Tarea_Curso_Nomina
             this.PnlContenedor.Controls.Add(frm);
             this.PnlContenedor.Tag = frm;
             frm.Show();
+
         }
 
 
@@ -102,11 +113,31 @@ namespace Tarea_Curso_Nomina
             this.PnlContenedor.Tag = frmNo;
             frmNo.Show();
 
+
         }
 
         private void BtnNomina_Click(object sender, EventArgs e)
         {
             AbrirNomina(new Nomina());
+        }
+
+        private void AbrirSesion(object Sesion1)
+        {
+            if (this.PnlContenedor.Controls.Count > 0)
+                this.PnlContenedor.Controls.RemoveAt(0);
+            Sesion frmSe = Sesion1 as Sesion;
+            frmSe.TopLevel = false;
+            frmSe.Dock = DockStyle.Fill;
+            this.PnlContenedor.Controls.Add(frmSe);
+            this.PnlContenedor.Tag = frmSe;
+            frmSe.Show();
+
+
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            AbrirSesion(new Sesion());
         }
     }
 }

@@ -37,6 +37,7 @@
             BtnSalir = new Button();
             PnMenuVertical = new Panel();
             PnlMenu = new Panel();
+            btnUsuario = new Button();
             BtnNomina = new Button();
             pictureBox1 = new PictureBox();
             BtnEmpleados = new Button();
@@ -130,6 +131,7 @@
             // 
             // PnlMenu
             // 
+            PnlMenu.Controls.Add(btnUsuario);
             PnlMenu.Controls.Add(BtnNomina);
             PnlMenu.Controls.Add(pictureBox1);
             PnlMenu.Controls.Add(BtnEmpleados);
@@ -140,6 +142,23 @@
             PnlMenu.Size = new Size(200, 415);
             PnlMenu.TabIndex = 0;
             // 
+            // btnUsuario
+            // 
+            btnUsuario.Cursor = Cursors.Hand;
+            btnUsuario.FlatStyle = FlatStyle.Flat;
+            btnUsuario.Font = new Font("Book Antiqua", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btnUsuario.ForeColor = SystemColors.ControlLightLight;
+            btnUsuario.Image = (Image)resources.GetObject("btnUsuario.Image");
+            btnUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUsuario.Location = new Point(12, 200);
+            btnUsuario.Name = "btnUsuario";
+            btnUsuario.Size = new Size(155, 41);
+            btnUsuario.TabIndex = 3;
+            btnUsuario.Text = "Usuario";
+            btnUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUsuario.UseVisualStyleBackColor = true;
+            btnUsuario.Click += btnUsuario_Click;
+            // 
             // BtnNomina
             // 
             BtnNomina.Cursor = Cursors.Hand;
@@ -148,7 +167,7 @@
             BtnNomina.ForeColor = Color.White;
             BtnNomina.Image = (Image)resources.GetObject("BtnNomina.Image");
             BtnNomina.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnNomina.Location = new Point(39, 245);
+            BtnNomina.Location = new Point(12, 323);
             BtnNomina.Name = "BtnNomina";
             BtnNomina.Size = new Size(155, 41);
             BtnNomina.TabIndex = 2;
@@ -160,7 +179,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(18, 13);
+            pictureBox1.Location = new Point(3, 6);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(176, 79);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -175,7 +194,7 @@
             BtnEmpleados.ForeColor = SystemColors.ControlLightLight;
             BtnEmpleados.Image = (Image)resources.GetObject("BtnEmpleados.Image");
             BtnEmpleados.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnEmpleados.Location = new Point(39, 161);
+            BtnEmpleados.Location = new Point(12, 260);
             BtnEmpleados.Name = "BtnEmpleados";
             BtnEmpleados.Size = new Size(155, 41);
             BtnEmpleados.TabIndex = 0;
@@ -235,5 +254,6 @@
         private Button BtnEmpleados;
         private PictureBox pictureBox1;
         private Button BtnNomina;
+        private Button btnUsuario;
     }
 }
