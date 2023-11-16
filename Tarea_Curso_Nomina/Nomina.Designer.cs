@@ -52,7 +52,7 @@
             // 
             dvgdatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dvgdatos.Columns.AddRange(new DataGridViewColumn[] { code, ninss, nruc, pnombre, snombre, papellido, sapellido, cedula, fnacimiento, direccion, ecivil, sexo, telefono, celular, fcontratacion, fcierrecontrato });
-            dvgdatos.Location = new Point(25, 174);
+            dvgdatos.Location = new Point(12, 303);
             dvgdatos.Name = "dvgdatos";
             dvgdatos.RowHeadersWidth = 51;
             dvgdatos.RowTemplate.Height = 29;
@@ -176,7 +176,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1344, 484);
+            ClientSize = new Size(1344, 613);
             Controls.Add(dvgdatos);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Nomina";
@@ -187,8 +187,6 @@
         }
 
         #endregion
-
-        private DataGridView dvgdatos;
         private DataGridViewTextBoxColumn code;
         private DataGridViewTextBoxColumn ninss;
         private DataGridViewTextBoxColumn nruc;
@@ -205,5 +203,6 @@
         private DataGridViewTextBoxColumn celular;
         private DataGridViewTextBoxColumn fcontratacion;
         private DataGridViewTextBoxColumn fcierrecontrato;
+        public DataGridView dvgdatos;
     }
 }

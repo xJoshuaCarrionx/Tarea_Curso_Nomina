@@ -19,19 +19,19 @@ namespace Tarea_Curso_Nomina
         private string CorrectUserName2 = "Joshua Carrion";
         private string CorrectPassword2 = "08082022";
         private int LoginAttempts = 0;
-
+        Menu menu = new Menu();
+        
+        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwind, int wMsg, int WPara, int lParam);
-
-
         public Sesion()
         {
             InitializeComponent();
             txtUsuario.Focus();
+            
         }
-
         private void btnsesion_Click(object sender, EventArgs e)
         {
             string IngresarUsuaruio = txtUsuario.Text;
@@ -40,32 +40,26 @@ namespace Tarea_Curso_Nomina
             {
                 MessageBox.Show("No pueden quedar los campos de texto en blanco,por favor ingrese datos.", "Error!!");
                 return;
-
             }
-
-            if (IngresarUsuaruio == CorrectUserName1 && IngresarContraseña == CorrectPassword1)
+            else if (IngresarUsuaruio == CorrectUserName1 && IngresarContraseña == CorrectPassword1)
             {
                 MessageBox.Show("¡Inicio de sesion Exitosa!", "Bienvenido!!");
                 MessageBox.Show("Bienvenido al programa de Nomina Empleado,usuario.", "Bienvenido!!");
-
-                Menu obj = new Menu();
+                menu.Show();
+                txtUsuario.Text = "";
+                txtContraseña.Text = "";
                 this.Hide();
-                obj.Show();
-                this.Hide();
-
-
+                
             }
             else if (IngresarUsuaruio == CorrectUserName2 && IngresarContraseña == CorrectPassword2)
             {
                 MessageBox.Show("¡Inicio de sesion Exitosa!", "Bienvenido!!");
                 MessageBox.Show("Bienvenido al programa de Nomina Empleado,usuario.", "Bienvenido!!");
-
-                Menu obj = new Menu();
+                menu.Show();
+                txtUsuario.Text = "";
+                txtContraseña.Text = "";
                 this.Hide();
-                obj.Show();
-                this.Hide();
-
-
+            
             }
             else
             {
@@ -76,16 +70,16 @@ namespace Tarea_Curso_Nomina
                     this.Close();
 
                 }
-
                 else
                 {
                     MessageBox.Show("Usuario o contraseña incorrectos.Intentos restantes : " +
                         "" + (3 - LoginAttempts));
+                    txtUsuario.Text = "";
+                    txtContraseña.Text = "";
                 }
-
             }
+            
         }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             txtContraseña.PasswordChar = checkBox1.Checked ? '\0' : '*';
@@ -95,13 +89,9 @@ namespace Tarea_Curso_Nomina
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
 
         }
-
-
-
     }
 }

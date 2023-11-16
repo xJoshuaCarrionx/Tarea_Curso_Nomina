@@ -16,11 +16,16 @@ namespace Tarea_Curso_Nomina
         {
             InitializeComponent();
         }
-       
+
         private void Nomina_Load(object sender, EventArgs e)
         {
-            Empleados obj = new Empleados();
-            obj.Close();
+
+
+        }
+        public void AgregarFila(string codigo, string PrimerNombre, string PrimerApellido)
+        {
+
+            dvgdatos.Rows.Add(codigo, PrimerNombre, PrimerApellido);
         }
     }
 }

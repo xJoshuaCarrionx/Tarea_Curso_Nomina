@@ -26,13 +26,18 @@ namespace Clases_Nomina
         private DateTime _fechaCierreContrato;
         private decimal _salarioOrdinario;
         private bool _activo;
+        private int _salarioporhora;
+        private int _horastrabajadas;
+        private int HHE;
 
         public Empleado()
         {
 
         }
 
-        public Empleado(int numeroEmpleado, string numeroCedula, string numeroINSS, string numeroRUC, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, DateTime fechaNacimiento, string sexo, string estadoCivil, string direccion, string telefono, string celular, DateTime fechaContratacion, DateTime fechaCierreContrato, decimal salarioOrdinario, bool activo)
+        public Empleado(int numeroEmpleado, string numeroCedula, string numeroINSS, string numeroRUC, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido,
+            DateTime fechaNacimiento, string sexo, string estadoCivil, string direccion, string telefono, string celular, DateTime fechaContratacion, DateTime fechaCierreContrato, decimal salarioOrdinario,
+            bool activo, int salarioporhora, int horastrabajadas, int HHE)
         {
 
             _numeroEmpleado = numeroEmpleado;
@@ -53,6 +58,9 @@ namespace Clases_Nomina
             FechaCierreContrato = fechaCierreContrato;
             SalarioOrdinario = salarioOrdinario;
             Activo = activo;
+            _salarioporhora = salarioporhora;
+            _horastrabajadas = horastrabajadas;
+            this.HHE = HHE;
         }
 
         public int NumeroEmpleado
@@ -77,6 +85,11 @@ namespace Clases_Nomina
         {
             get { return _numeroRUC; }
             set { _numeroRUC = value; }
+        }
+        public int HorasExtras
+        {
+            get => HHE;
+            set => HHE = value;
         }
 
         public string PrimerNombre
@@ -154,6 +167,16 @@ namespace Clases_Nomina
         {
             get => _activo;
             set => _activo = value;
+        }
+        public int Salarioporhora
+        {
+            get => _salarioporhora;
+            set => _salarioporhora = value;
+        }
+        public int Horastrabajadas
+        {
+            get => _horastrabajadas;
+            set => _horastrabajadas = value;
         }
     }
 }

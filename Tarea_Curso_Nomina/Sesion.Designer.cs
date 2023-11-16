@@ -56,15 +56,17 @@
             pnlContenedor.Dock = DockStyle.Fill;
             pnlContenedor.ForeColor = SystemColors.ActiveCaptionText;
             pnlContenedor.Location = new Point(0, 0);
+            pnlContenedor.Margin = new Padding(3, 4, 3, 4);
             pnlContenedor.Name = "pnlContenedor";
-            pnlContenedor.Size = new Size(392, 353);
+            pnlContenedor.Size = new Size(536, 471);
             pnlContenedor.TabIndex = 1;
             // 
             // btnsesion
             // 
-            btnsesion.Location = new Point(128, 262);
+            btnsesion.Location = new Point(146, 349);
+            btnsesion.Margin = new Padding(3, 4, 3, 4);
             btnsesion.Name = "btnsesion";
-            btnsesion.Size = new Size(95, 23);
+            btnsesion.Size = new Size(109, 31);
             btnsesion.TabIndex = 7;
             btnsesion.Text = "Iniciar sesion";
             btnsesion.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(128, 219);
+            checkBox1.Location = new Point(146, 292);
+            checkBox1.Margin = new Padding(3, 4, 3, 4);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(130, 19);
+            checkBox1.Size = new Size(160, 24);
             checkBox1.TabIndex = 6;
             checkBox1.Text = "Mostrar Contraseña";
             checkBox1.UseVisualStyleBackColor = true;
@@ -83,26 +86,29 @@
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(128, 179);
+            txtContraseña.Location = new Point(146, 239);
+            txtContraseña.Margin = new Padding(3, 4, 3, 4);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PasswordChar = '*';
-            txtContraseña.Size = new Size(149, 23);
+            txtContraseña.Size = new Size(170, 27);
             txtContraseña.TabIndex = 5;
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(128, 136);
+            txtUsuario.Location = new Point(146, 181);
+            txtUsuario.Margin = new Padding(3, 4, 3, 4);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(149, 23);
+            txtUsuario.Size = new Size(170, 27);
             txtUsuario.TabIndex = 4;
             // 
             // pictureBox1
             // 
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(145, 65);
+            pictureBox1.Location = new Point(166, 87);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.Size = new Size(114, 66);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -110,18 +116,18 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(45, 182);
+            label3.Location = new Point(51, 243);
             label3.Name = "label3";
-            label3.Size = new Size(70, 15);
+            label3.Size = new Size(86, 20);
             label3.TabIndex = 2;
             label3.Text = "Contraseña:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(45, 139);
+            label2.Location = new Point(51, 185);
             label2.Name = "label2";
-            label2.Size = new Size(50, 15);
+            label2.Size = new Size(62, 20);
             label2.TabIndex = 1;
             label2.Text = "Usuario:";
             // 
@@ -131,19 +137,20 @@
             label1.BackColor = SystemColors.ButtonFace;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(122, 26);
+            label1.Location = new Point(139, 35);
             label1.Name = "label1";
-            label1.Size = new Size(155, 22);
+            label1.Size = new Size(195, 29);
             label1.TabIndex = 0;
             label1.Text = "Inicio de sesion";
             // 
             // Sesion
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(392, 353);
+            ClientSize = new Size(536, 471);
             ControlBox = false;
             Controls.Add(pnlContenedor);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Sesion";
             StartPosition = FormStartPosition.CenterScreen;
             pnlContenedor.ResumeLayout(false);
@@ -158,9 +165,9 @@
         private PictureBox pictureBox1;
         private Label label3;
         private Label label2;
-        private TextBox txtContraseña;
-        private TextBox txtUsuario;
         private CheckBox checkBox1;
-        private Button btnsesion;
+        public Button btnsesion;
+        public TextBox txtContraseña;
+        public TextBox txtUsuario;
     }
 }
