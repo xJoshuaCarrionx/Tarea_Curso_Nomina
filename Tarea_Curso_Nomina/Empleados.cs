@@ -16,6 +16,7 @@ namespace Tarea_Curso_Nomina
     public partial class Empleados : Form
     {
         string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        int selectfila;
         public Empleados()
         {
             InitializeComponent();
@@ -82,11 +83,22 @@ namespace Tarea_Curso_Nomina
                 obj.Salarioporhora = Convert.ToInt32(txtsalporhora.Text);
                 obj.Horastrabajadas = Convert.ToInt32(txthorastrabajadas.Text);
                 obj.HorasExtras = Convert.ToInt32(txthorasextras.Text);
+                if (chboxestado.Checked == true)
+                {
+                    chboxestado.Text = "Activo";
+                }
+                else
+                {
+                    chboxestado.Text = "Inactivo";
+                }
 
                 dvgdatos.Rows.Add(obj.NumeroEmpleado.ToString(), obj.NumeroINSS, obj.NumeroRUC, obj.PrimerNombre, obj.SegundoNombre, obj.PrimerApellido, obj.SegundoApellido,
                                        obj.NumeroCedula, obj.FechaNacimiento, obj.Direccion, obj.EstadoCivil, obj.Sexo, obj.Telefono, obj.Celular, obj.FechaContratacion,
-                                                          obj.FechaCierreContrato, obj.Salarioporhora, obj.Horastrabajadas);
+                                                          obj.FechaCierreContrato, chboxestado.Text, obj.Salarioporhora, obj.Horastrabajadas, calcular_Nomina.CalcularSalario(obj), obj.HorasExtras.ToString(),
+                                                          calcular_Nomina.CalcularSalarioBruto(obj), calcular_Nomina.CalcularSalarioAnual(obj), calcular_Nomina.DeduccionDeIR(obj), calcular_Nomina.DeduccionInss(obj),
+                                                          calcular_Nomina.SalarioNeto(obj));
             }
+            chboxestado.Checked = false;
             Limpiar();
         }
         private void Limpiar()
@@ -267,6 +279,23 @@ namespace Tarea_Curso_Nomina
         private void cboestadocivil_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnelmininar_Click(object sender, EventArgs e)
+        {
+            if (selectfila >= 0)
+            {
+                dvgdatos.Rows.RemoveAt(selectfila);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila");
+            }
+        }
+
+        private void dvgdatos_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            selectfila = e.RowIndex;
         }
     }
 }

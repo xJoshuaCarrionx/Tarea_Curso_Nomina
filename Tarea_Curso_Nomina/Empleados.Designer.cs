@@ -45,6 +45,7 @@
             celular = new DataGridViewTextBoxColumn();
             fcontratacion = new DataGridViewTextBoxColumn();
             fcierrecontrato = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -55,6 +56,7 @@
             Deu = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
+            chboxestado = new CheckBox();
             label16 = new Label();
             txtinss = new TextBox();
             label15 = new Label();
@@ -96,6 +98,7 @@
             txthorastrabajadas = new TextBox();
             label17 = new Label();
             txtsalporhora = new TextBox();
+            btnelmininar = new Button();
             ((System.ComponentModel.ISupportInitialize)dvgdatos).BeginInit();
             groupBox1.SuspendLayout();
             Ingresos.SuspendLayout();
@@ -104,7 +107,7 @@
             // dvgdatos
             // 
             dvgdatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvgdatos.Columns.AddRange(new DataGridViewColumn[] { code, ninss, nruc, pnombre, snombre, papellido, sapellido, cedula, fnacimiento, direccion, ecivil, sexo, telefono, celular, fcontratacion, fcierrecontrato, Column1, Column2, Column3, Column4, Column5, Column6, Column7, Deu, Column8 });
+            dvgdatos.Columns.AddRange(new DataGridViewColumn[] { code, ninss, nruc, pnombre, snombre, papellido, sapellido, cedula, fnacimiento, direccion, ecivil, sexo, telefono, celular, fcontratacion, fcierrecontrato, Column9, Column1, Column2, Column3, Column4, Column5, Column6, Column7, Deu, Column8 });
             dvgdatos.Location = new Point(12, 574);
             dvgdatos.Name = "dvgdatos";
             dvgdatos.RowHeadersWidth = 51;
@@ -112,6 +115,7 @@
             dvgdatos.ScrollBars = ScrollBars.Horizontal;
             dvgdatos.Size = new Size(1307, 277);
             dvgdatos.TabIndex = 27;
+            dvgdatos.CellClick += dvgdatos_CellClick_1;
             // 
             // code
             // 
@@ -225,6 +229,13 @@
             fcierrecontrato.Name = "fcierrecontrato";
             fcierrecontrato.Width = 125;
             // 
+            // Column9
+            // 
+            Column9.HeaderText = "Estado del empleado";
+            Column9.MinimumWidth = 6;
+            Column9.Name = "Column9";
+            Column9.Width = 125;
+            // 
             // Column1
             // 
             Column1.HeaderText = "Salario/Hora";
@@ -290,6 +301,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(chboxestado);
             groupBox1.Controls.Add(label16);
             groupBox1.Controls.Add(txtinss);
             groupBox1.Controls.Add(label15);
@@ -328,6 +340,16 @@
             groupBox1.TabIndex = 28;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del empleado";
+            // 
+            // chboxestado
+            // 
+            chboxestado.AutoSize = true;
+            chboxestado.Location = new Point(1118, 182);
+            chboxestado.Name = "chboxestado";
+            chboxestado.Size = new Size(173, 24);
+            chboxestado.TabIndex = 76;
+            chboxestado.Text = "Estado del empleado";
+            chboxestado.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
@@ -690,11 +712,23 @@
             txtsalporhora.TabIndex = 76;
             txtsalporhora.TextChanged += txtsalporhora_TextChanged;
             // 
+            // btnelmininar
+            // 
+            btnelmininar.Location = new Point(869, 485);
+            btnelmininar.Margin = new Padding(3, 4, 3, 4);
+            btnelmininar.Name = "btnelmininar";
+            btnelmininar.Size = new Size(86, 31);
+            btnelmininar.TabIndex = 72;
+            btnelmininar.Text = "Eliminar";
+            btnelmininar.UseVisualStyleBackColor = true;
+            btnelmininar.Click += btnelmininar_Click;
+            // 
             // Empleados
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1438, 863);
+            Controls.Add(btnelmininar);
             Controls.Add(Ingresos);
             Controls.Add(groupBox1);
             Controls.Add(dvgdatos);
@@ -755,6 +789,7 @@
         private TextBox txtsalporhora;
         private Label label19;
         private TextBox txthorasextras;
+        private CheckBox chboxestado;
         private DataGridViewTextBoxColumn code;
         private DataGridViewTextBoxColumn ninss;
         private DataGridViewTextBoxColumn nruc;
@@ -771,6 +806,7 @@
         private DataGridViewTextBoxColumn celular;
         private DataGridViewTextBoxColumn fcontratacion;
         private DataGridViewTextBoxColumn fcierrecontrato;
+        private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
@@ -780,5 +816,6 @@
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Deu;
         private DataGridViewTextBoxColumn Column8;
+        private Button btnelmininar;
     }
 }
